@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type="text/javascript">
+var countBox = 1;
+var boxName = 0;
+function sum()
+{
+var n1=document.getElementById("text1").value
+var n2=document.getElementById("text2").value
+var n3=document.getElementById("text3").value
+var n4=document.getElementById("text4").value
+var n5=document.getElementById("text5").value
+var n6=document.getElementById("text6").value
+if(n1 == "")
+n1 = 0;
+if(n2 == "")
+n2 = 0;
+if(n3 == "")
+n3 = 0;
+if(n4 == "")
+n4 = 0;
+if(n5 == "")
+n5 = 0;
+if(n6 == "")
+n6 = 0;
+var result=parseInt(n1) + parseInt(n2) + parseInt(n3) + parseInt(n4) + parseInt(n5) + parseInt(n6);
+if (!isNaN(result))
+{
+	document.getElementById("textResult").value = result;
+} 
+
+submitOK="true"
+
+}
+function addTextbox()
+{
+	var boxName="textBox"+countBox; 
+document.getElementById('responce').innerHTML+='<br/><input type="text" id="'+boxName+'" value="'+boxName+'" "  /><br/>';
+     countBox += 1;
+}
+</script>
+</head>
+
+<body>
+<form action="Portfoliotwo.html" onsubmit="return sum()">
+Number one: <input type="text" id="text1" size="20"><br />
+Number two: <input type="text" id="text2" size="20"><br />
+Number three: <input type="text" id="text3" size="20"><br />
+Number four: <input type="text" id="text4" size="20"><br />
+Number five: <input type="text" id="text5" size="20"><br />
+Number six: <input type="text" id="text6" size="20"><br />
+Results: <input type="text" id="textResult" size="20"><br />
+<br />
+<input type="button" value="Add new text box" onclick="addTextbox()" name="button" size="20">
+<span id="responce"></span>
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+</html>

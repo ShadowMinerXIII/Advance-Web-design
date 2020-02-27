@@ -1,0 +1,19 @@
+<html>
+<script type="text/javascript">
+numbers = new Array();
+i = 0;
+do {
+    n = window.prompt("Enter the a postive number");
+    if (n > 0 && n != "undefined") numbers[i] = n;
+    i = i + 1;
+   }
+    while (n > 0 && n != "undefined");
+document.write("<h2>" + (numbers.length) + " numbers entered.</h2>");
+document.write("<ol>");
+for (i in numbers) {
+    document.write("<li>" + numbers[i] + "<br>");
+}
+document.write("</ol>");
+</script>
+</body>
+</html>

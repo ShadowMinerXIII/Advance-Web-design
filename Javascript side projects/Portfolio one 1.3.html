@@ -1,0 +1,23 @@
+<html>
+<script type="text/javascript">
+var largestNum, smallestNum;
+var numInput = parseInt(prompt("Please enter the next number (-1 to exit)"));
+if (numInput != -1) {
+    largestNum = numInput;
+    smallestNum = numInput;
+}
+
+while (numInput != -1) {
+    if (numInput > largestNum) {
+        largestNum = numInput;
+    } else if (numInput < smallestNum) {
+        smallestNum = numInput;
+    }
+    numInput = parseInt(prompt("Please enter the next number (-1 to exit)"));
+}
+
+alert("Smallest number is " + smallestNum + ", largest number is " + largestNum);
+alert(parseInt(smallestNum) + parseInt(largestNum));
+</script>
+</body>
+</html>
